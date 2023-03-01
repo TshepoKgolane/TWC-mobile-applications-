@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActions"
+    android:background="@color/interfaceColor">
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="Select Action"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <!--Top Cards -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lblTitle"
+        android:layout_margin="8dp"
+        android:id="@+id/TopCardLayout">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardAdd"
+
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/interfaceDColor"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="1dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/add_person"/>
+
+                <TextView
+                    android:id="@+id/AvailabelResourceValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/AvailRes"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Add User"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/interfaceDColor"
+            android:id="@+id/deleteCard"
+            app:cardCornerRadius="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="1dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/remove_person"/>
+
+                <TextView
+                    android:id="@+id/lblSignOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/AvailRes"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Delete User"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/TopCardLayout"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/interfaceDColor"
+        android:id="@+id/exitCard"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="1dp">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/ic_baseline_exit_to_app_24"/>
+
+            <TextView
+                android:id="@+id/lblDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AvailRes"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Sign Out"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
